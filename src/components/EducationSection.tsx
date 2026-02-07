@@ -1,17 +1,16 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
-import { GraduationCap } from "lucide-react";
 
 const education = [
   {
     degree: "B.Tech in Information Technology",
     institution: "SVKM IOT Dhule – DBATU University",
-    score: "CGPA: 7.8 / 10 (Till Date)",
+    score: "CGPA: 7.8 / 10",
     period: "Current",
   },
   {
     degree: "HSC",
-    institution: "Mahatma Jyotirao Phule Junior College, Paras (Akola)",
+    institution: "Mahatma Jyotirao Phule Junior College, Paras",
     score: "75.33%",
     period: "2022",
   },
@@ -31,20 +30,17 @@ const EducationSection = () => {
           <SectionHeading title="Education" />
         </AnimatedSection>
 
-        <div className="space-y-6 max-w-3xl">
+        <div className="space-y-3 max-w-2xl">
           {education.map((edu, i) => (
-            <AnimatedSection key={i} delay={i * 100}>
-              <div className="flex gap-4 p-5 rounded-xl bg-card border border-border card-shadow">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5 text-accent" />
+            <AnimatedSection key={i} delay={i * 80}>
+              <div className="flex items-baseline justify-between gap-4 py-3 border-b border-border last:border-0">
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-foreground text-sm">{edu.degree}</h3>
+                  <p className="text-muted-foreground text-xs mt-0.5">{edu.institution}</p>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <h3 className="font-semibold text-foreground">{edu.degree}</h3>
-                    <span className="text-sm text-muted-foreground font-medium">{edu.period}</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm mt-1">{edu.institution}</p>
-                  <p className="text-accent text-sm font-medium mt-1">{edu.score}</p>
+                <div className="text-right flex-shrink-0">
+                  <span className="text-xs font-medium text-accent">{edu.score}</span>
+                  <p className="text-xs text-muted-foreground">{edu.period}</p>
                 </div>
               </div>
             </AnimatedSection>

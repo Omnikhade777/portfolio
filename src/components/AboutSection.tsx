@@ -6,18 +6,15 @@ const AboutSection = () => {
     <section id="about" className="section-padding section-alt-bg">
       <div className="section-container">
         <AnimatedSection>
-          <SectionHeading title="About Me" />
+          <SectionHeading title="About" />
         </AnimatedSection>
-        <AnimatedSection delay={150}>
-          <div className="max-w-3xl space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
+        <AnimatedSection delay={100}>
+          <div className="max-w-2xl space-y-3 text-muted-foreground leading-relaxed text-[0.935rem]">
             <p>
-              I am a B.Tech Information Technology student at SVKM IOT Dhule (DBATU University) with hands-on experience in React.js and Node.js development.
+              B.Tech IT student at SVKM IOT Dhule (DBATU) with hands-on React.js and Node.js experience. Currently a GTM Engineer Intern — translating business requirements into scalable software for finance teams.
             </p>
             <p>
-              I currently work as a GTM Engineer Intern, collaborating with product and sales teams to translate business and finance requirements into scalable software solutions.
-            </p>
-            <p>
-              My focus is on automation, AI-driven workflows, and building systems that create real business impact.
+              Focused on AI-driven workflows, automation, and systems that deliver real business impact.
             </p>
           </div>
         </AnimatedSection>

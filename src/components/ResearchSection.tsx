@@ -7,26 +7,21 @@ const ResearchSection = () => {
     <section className="section-padding">
       <div className="section-container">
         <AnimatedSection>
-          <SectionHeading title="Research & Publication" />
+          <SectionHeading title="Publication" />
         </AnimatedSection>
 
-        <AnimatedSection delay={150}>
-          <div className="max-w-3xl p-6 md:p-8 rounded-xl bg-card border border-border card-shadow">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                <FileText className="w-5 h-5 text-accent" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2 leading-snug">
-                  Enhanced Image Captioning with Deep Learning: Leveraging Attention Mechanism for Improved Image Description
-                </h3>
-                <p className="text-muted-foreground text-sm mb-1">
-                  Published in GRENZE International Journal of Engineering & Technology
-                </p>
-                <p className="text-muted-foreground text-sm">
-                  Vol. 11, No. 2, 2025
-                </p>
-              </div>
+        <AnimatedSection delay={100}>
+          <div className="max-w-2xl flex items-start gap-3 p-4 rounded-xl bg-card border border-border card-shadow">
+            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-accent/8 flex items-center justify-center mt-0.5">
+              <FileText className="w-4 h-4 text-accent" />
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-foreground leading-snug">
+                Enhanced Image Captioning with Deep Learning: Leveraging Attention Mechanism for Improved Image Description
+              </h3>
+              <p className="text-muted-foreground text-xs mt-1">
+                GRENZE International Journal of Engineering & Technology · Vol. 11, No. 2, 2025
+              </p>
             </div>
           </div>
         </AnimatedSection>
