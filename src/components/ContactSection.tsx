@@ -8,60 +8,45 @@ const ContactSection = () => {
     <section id="contact" className="section-padding section-alt-bg">
       <div className="section-container">
         <AnimatedSection>
-          <SectionHeading
-            title="Get in Touch"
-            subtitle="Let's discuss your next project or opportunity."
-          />
+          <SectionHeading title="Contact" />
         </AnimatedSection>
 
-        <AnimatedSection delay={150}>
-          <div className="max-w-2xl space-y-6">
-            {/* Contact info */}
-            <div className="space-y-4">
+        <AnimatedSection delay={100}>
+          <div className="max-w-md space-y-5">
+            <div className="space-y-2.5">
               <a
                 href="mailto:om.nikhade93226@gmail.com"
-                className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border card-shadow group hover:border-accent/30 transition-colors"
+                className="flex items-center gap-3 p-3.5 rounded-lg bg-card border border-border card-shadow group hover:border-accent/30 transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                  <Mail className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="text-foreground font-medium">om.nikhade93226@gmail.com</p>
-                </div>
+                <Mail className="w-4 h-4 text-accent flex-shrink-0" />
+                <span className="text-sm text-foreground font-medium truncate">om.nikhade93226@gmail.com</span>
               </a>
 
               <a
                 href="tel:+919322422586"
-                className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border card-shadow group hover:border-accent/30 transition-colors"
+                className="flex items-center gap-3 p-3.5 rounded-lg bg-card border border-border card-shadow group hover:border-accent/30 transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                  <Phone className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="text-foreground font-medium">+91 9322422586</p>
-                </div>
+                <Phone className="w-4 h-4 text-accent flex-shrink-0" />
+                <span className="text-sm text-foreground font-medium">+91 9322422586</span>
               </a>
             </div>
 
-            {/* Social links */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex gap-2">
               <a href="https://github.com/Omnikhade777" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg">
-                  <Github className="w-5 h-5" />
+                <Button variant="outline" size="sm">
+                  <Github className="w-4 h-4" />
                   GitHub
                 </Button>
               </a>
               <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg">
-                  <Linkedin className="w-5 h-5" />
+                <Button variant="outline" size="sm">
+                  <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </Button>
               </a>
               <a href="https://leetcode.com/your-username" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg">
-                  <Code2 className="w-5 h-5" />
+                <Button variant="outline" size="sm">
+                  <Code2 className="w-4 h-4" />
                   LeetCode
                 </Button>
               </a>
