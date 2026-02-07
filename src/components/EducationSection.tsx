@@ -5,8 +5,8 @@ const education = [
   {
     degree: "B.Tech in Information Technology",
     institution: "SVKM IOT Dhule – DBATU University",
-    score: "CGPA: 7.8 / 10",
-    period: "Current",
+    score: "CGPA: 7.8",
+    period: "Present",
   },
   {
     degree: "HSC",
@@ -30,21 +30,30 @@ const EducationSection = () => {
           <SectionHeading title="Education" />
         </AnimatedSection>
 
-        <div className="space-y-3 max-w-2xl">
-          {education.map((edu, i) => (
-            <AnimatedSection key={i} delay={i * 80}>
-              <div className="flex items-baseline justify-between gap-4 py-3 border-b border-border last:border-0">
-                <div className="min-w-0">
-                  <h3 className="font-semibold text-foreground text-sm">{edu.degree}</h3>
-                  <p className="text-muted-foreground text-xs mt-0.5">{edu.institution}</p>
+        <div className="max-w-2xl relative">
+          {/* Timeline line */}
+          <div className="absolute left-[7px] top-2 bottom-2 w-px bg-border" />
+
+          <div className="space-y-6">
+            {education.map((edu, i) => (
+              <AnimatedSection key={i} delay={i * 100}>
+                <div className="flex gap-5 relative">
+                  {/* Timeline dot */}
+                  <div className="relative z-10 mt-1.5">
+                    <div className="w-3.5 h-3.5 rounded-full border-2 border-accent bg-background" />
+                  </div>
+                  <div className="flex-1 pb-1">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <h3 className="font-semibold text-foreground text-[0.9rem]">{edu.degree}</h3>
+                      <span className="text-xs text-muted-foreground font-medium flex-shrink-0">{edu.period}</span>
+                    </div>
+                    <p className="text-muted-foreground text-sm mt-0.5">{edu.institution}</p>
+                    <span className="inline-block mt-1.5 text-xs font-semibold text-accent bg-accent/[0.08] px-2 py-0.5 rounded-full">{edu.score}</span>
+                  </div>
                 </div>
-                <div className="text-right flex-shrink-0">
-                  <span className="text-xs font-medium text-accent">{edu.score}</span>
-                  <p className="text-xs text-muted-foreground">{edu.period}</p>
-                </div>
-              </div>
-            </AnimatedSection>
-          ))}
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -39,15 +39,15 @@ const SkillsSection = () => {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {skillCategories.map((category, i) => (
             <AnimatedSection key={i} delay={i * 60}>
-              <div className="p-4 rounded-xl bg-card border border-border card-shadow h-full">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-accent mb-3">
+              <div className="p-4 rounded-2xl bg-card border border-border card-shadow h-full group hover:border-accent/20 transition-colors">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-accent mb-3">
                   {category.title}
                 </h3>
                 <div className="flex flex-wrap gap-1.5">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-2.5 py-1 text-xs bg-secondary text-secondary-foreground rounded-md font-medium"
+                      className="px-2.5 py-1 text-xs bg-secondary text-secondary-foreground rounded-lg font-medium"
                     >
                       {skill}
                     </span>
