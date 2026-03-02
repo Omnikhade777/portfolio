@@ -16,13 +16,13 @@ const otherProjects = [
     title: "Naukri.com – Job Portal",
     description: "Full-stack job portal with role-based access. Admins manage listings and track applications; candidates apply, save jobs, and get recommendations.",
     tech: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Prisma", "PostgreSQL"],
-    link: "#",
+    link: "https://naukari-com-ten.vercel.app",
   },
   {
     title: "Thinkory.com – Blogging Platform",
     description: "Blog platform with clean writing interface, powered by serverless APIs for fast, scalable performance.",
     tech: ["React.js", "TypeScript", "Tailwind CSS", "Cloudflare Workers", "Hono.js"],
-    link: "#",
+    link: "https://thinkory-lfgz.vercel.app",
   },
   {
     title: "Digital Wallet App",
@@ -51,37 +51,45 @@ const ProjectsSection = () => {
 
         {/* Featured project */}
         <AnimatedSection delay={100}>
-          <div className="mb-8 p-6 md:p-8 rounded-2xl bg-card border border-accent/15 card-shadow card-glow relative overflow-hidden">
+          <div className="mb-6 p-5 md:p-6 rounded-2xl modern-card group overflow-hidden relative">
+            {/* Code bracket decorations */}
+            <div className="absolute top-4 left-4 text-accent/40 font-bold text-lg font-mono group-hover:text-accent/60 transition-colors">
+              &lt;
+            </div>
+            <div className="absolute bottom-4 right-4 text-accent/40 font-bold text-lg font-mono group-hover:text-accent/60 transition-colors">
+              /&gt;
+            </div>
+            
             {/* Gradient accent strip */}
             <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'var(--gradient-accent)' }} />
             {/* Decorative glow */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-accent/[0.04] rounded-bl-[5rem]" />
 
             <div className="relative">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-3">
                 <Star className="w-4 h-4 text-accent fill-accent" />
                 <span className="text-xs font-bold text-accent uppercase tracking-widest">Featured Project</span>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
+              <h3 className="text-lg md:text-xl font-bold text-foreground mb-2">
                 {featuredProject.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed max-w-xl mb-5">
+              <p className="text-muted-foreground text-xs leading-relaxed max-w-xl mb-4">
                 {featuredProject.description}
               </p>
-              <div className="flex flex-wrap gap-2 mb-5">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {featuredProject.tech.map((t) => (
                   <span
                     key={t}
-                    className="px-2.5 py-1 text-xs font-semibold bg-accent/[0.08] text-accent rounded-full border border-accent/[0.1]"
+                    className="px-2.5 py-1 text-xs font-semibold bg-accent/[0.08] text-accent rounded-full border border-accent/[0.1] hover:border-accent/30 hover:bg-accent/15 transition-all duration-300 cursor-default"
                   >
                     {t}
                   </span>
                 ))}
               </div>
               <Link to="/case-study/cfo-intent-radar">
-                <Button variant="hero-accent" size="lg">
+                <Button variant="hero-accent" size="lg" className="btn-saas">
                   View Case Study
-                  <ArrowUpRight className="w-4 h-4" />
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Button>
               </Link>
             </div>
@@ -89,10 +97,10 @@ const ProjectsSection = () => {
         </AnimatedSection>
 
         {/* Other projects grid */}
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-3">
           {otherProjects.map((project, i) => (
             <AnimatedSection key={i} delay={150 + i * 80}>
-              <div className="group p-5 rounded-2xl bg-card border border-border card-shadow h-full flex flex-col transition-all duration-300 hover:border-accent/20">
+              <div className="group p-4 rounded-2xl modern-card h-full flex flex-col transition-all duration-300\">
                 <div className="flex items-start justify-between mb-2.5">
                   <h3 className="text-sm font-bold text-foreground group-hover:text-accent transition-colors leading-snug">
                     {project.title}

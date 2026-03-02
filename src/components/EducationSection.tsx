@@ -31,24 +31,24 @@ const EducationSection = () => {
         </AnimatedSection>
 
         <div className="max-w-2xl relative">
-          {/* Timeline line */}
-          <div className="absolute left-[7px] top-2 bottom-2 w-px bg-border" />
+          {/* Timeline line with gradient */}
+          <div className="absolute left-[7px] top-2 bottom-2 w-px bg-gradient-to-b from-accent via-accent/50 to-transparent" />
 
           <div className="space-y-6">
             {education.map((edu, i) => (
               <AnimatedSection key={i} delay={i * 100}>
                 <div className="flex gap-5 relative">
-                  {/* Timeline dot */}
+                  {/* Timeline dot with glow */}
                   <div className="relative z-10 mt-1.5">
-                    <div className="w-3.5 h-3.5 rounded-full border-2 border-accent bg-background" />
+                    <div className="w-3.5 h-3.5 rounded-full border-2 border-accent bg-background shadow-lg shadow-accent/30 ring-1 ring-accent/30" />
                   </div>
-                  <div className="flex-1 pb-1">
+                  <div className="flex-1 pb-1 p-4 rounded-xl modern-card hover:shadow-lg transition-all duration-300">
                     <div className="flex items-baseline justify-between gap-3">
                       <h3 className="font-semibold text-foreground text-[0.9rem]">{edu.degree}</h3>
-                      <span className="text-xs text-muted-foreground font-medium flex-shrink-0">{edu.period}</span>
+                      <span className="text-xs text-accent font-semibold flex-shrink-0">{edu.period}</span>
                     </div>
                     <p className="text-muted-foreground text-sm mt-0.5">{edu.institution}</p>
-                    <span className="inline-block mt-1.5 text-xs font-semibold text-accent bg-accent/[0.08] px-2 py-0.5 rounded-full">{edu.score}</span>
+                    <span className="inline-block mt-1.5 text-xs font-semibold text-accent bg-gradient-to-r from-accent/20 to-accent/5 px-2 py-0.5 rounded-full border border-accent/20">{edu.score}</span>
                   </div>
                 </div>
               </AnimatedSection>

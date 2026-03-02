@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
-import { ArrowLeft, ExternalLink, Mail } from "lucide-react";
+import { ArrowLeft, Mail } from "lucide-react";
 
 const caseStudy = {
   title: "CFO Intent Radar",
@@ -47,17 +47,21 @@ const caseStudy = {
 
 const CaseStudy = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md nav-shadow">
+    <main className="min-h-screen bg-background relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute top-0 right-0 w-72 h-72 rounded-full bg-gradient-to-br from-accent/10 to-accent/[0.02] blur-3xl opacity-50" />
+      <div className="absolute bottom-1/3 left-0 w-96 h-96 rounded-full bg-purple-500/5 blur-3xl opacity-50" />
+      
+      <nav className="sticky top-0 z-50 glass backdrop-blur-xl border-b border-accent/10">
         <div className="section-container flex items-center h-14">
-          <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-all duration-300 hover:gap-3">
             <ArrowLeft className="w-4 h-4" />
             <span className="text-sm font-medium">Back</span>
           </Link>
         </div>
       </nav>
 
-      <article className="section-container py-10 md:py-16">
+      <article className="section-container py-10 md:py-16 relative z-10">
         <div className="max-w-2xl mx-auto">
           <AnimatedSection>
             <div className="mb-10">
@@ -155,14 +159,8 @@ const CaseStudy = () => {
 
           <AnimatedSection delay={360}>
             <div className="flex flex-wrap gap-2.5 pt-6 border-t border-border">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <Button variant="hero" size="default">
-                  View Project
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </Button>
-              </a>
               <Link to="/#contact">
-                <Button variant="hero-outline" size="default">
+                <Button variant="hero" size="default">
                   <Mail className="w-3.5 h-3.5" />
                   Contact Me
                 </Button>

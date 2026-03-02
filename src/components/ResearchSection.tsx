@@ -11,9 +11,9 @@ const ResearchSection = () => {
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <div className="max-w-2xl flex items-start gap-4 p-5 rounded-2xl bg-card border border-border card-shadow relative overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'var(--gradient-accent)' }} />
-            <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-accent/[0.08] flex items-center justify-center mt-0.5">
+          <div className="max-w-2xl flex items-start gap-4 p-5 rounded-2xl modern-card relative overflow-hidden group\">
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
+            <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mt-0.5 group-hover:shadow-lg group-hover:shadow-accent/20 transition-all\">
               <FileText className="w-5 h-5 text-accent" />
             </div>
             <div>

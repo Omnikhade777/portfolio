@@ -18,9 +18,9 @@ const ExperienceSection = () => {
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <div className="max-w-2xl p-5 md:p-6 rounded-2xl bg-card border border-border card-shadow card-glow relative overflow-hidden">
+          <div className="max-w-2xl p-4 md:p-5 rounded-2xl modern-card card-glow relative overflow-hidden\">
             {/* Subtle accent strip */}
-            <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'var(--gradient-accent)' }} />
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent\" />
 
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-accent/[0.08] flex items-center justify-center">

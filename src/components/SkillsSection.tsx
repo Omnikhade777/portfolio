@@ -36,18 +36,18 @@ const SkillsSection = () => {
           <SectionHeading title="Skills" />
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
           {skillCategories.map((category, i) => (
             <AnimatedSection key={i} delay={i * 60}>
-              <div className="p-4 rounded-2xl bg-card border border-border card-shadow h-full group hover:border-accent/20 transition-colors">
-                <h3 className="text-xs font-bold uppercase tracking-widest text-accent mb-3">
+              <div className="p-4 rounded-2xl modern-card h-full group transition-all duration-300">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-accent mb-3 group-hover:text-accent/80\">
                   {category.title}
                 </h3>
                 <div className="flex flex-wrap gap-1.5">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-2.5 py-1 text-xs bg-secondary text-secondary-foreground rounded-lg font-medium"
+                      className="px-2.5 py-1 text-xs bg-gradient-to-r from-accent/10 to-accent/5 text-secondary-foreground rounded-lg font-medium border border-accent/10 hover:border-accent/30 transition-all duration-300 hover:bg-accent/15 cursor-default\"
                     >
                       {skill}
                     </span>
