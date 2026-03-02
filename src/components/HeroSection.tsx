@@ -77,9 +77,9 @@ const HeroSection = () => {
           <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in" style={{ animationDelay: "300ms" }}>
             <div className="relative group">
               {/* Enhanced glow effect behind image */}
-              <div className="absolute -inset-6 rounded-[1.5rem] bg-gradient-to-br from-accent/30 via-accent/10 to-transparent blur-3xl opacity-70 group-hover:opacity-100 transition-all duration-500 animate-pulse" />
-              <div className="absolute -inset-3 rounded-[1.5rem] bg-gradient-to-tr from-purple-500/20 to-accent/10 blur-2xl opacity-50 group-hover:opacity-70 transition-all duration-500" />
-              <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border-2 border-accent/30 shadow-2xl ring-1 ring-accent/20">
+              <div className="absolute -inset-6 rounded-full bg-gradient-to-br from-accent/30 via-accent/10 to-transparent blur-3xl opacity-70 group-hover:opacity-100 transition-all duration-500 animate-pulse" />
+              <div className="absolute -inset-3 rounded-full bg-gradient-to-tr from-purple-500/20 to-accent/10 blur-2xl opacity-50 group-hover:opacity-70 transition-all duration-500" />
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-accent/30 shadow-2xl ring-1 ring-accent/20">
                 <img
                   src={profilePhoto}
                   alt="Om Laxman Nikhade"

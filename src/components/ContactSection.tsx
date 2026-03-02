@@ -16,7 +16,7 @@ const ContactSection = () => {
             <div className="space-y-3">
               <a
                 href="mailto:om.nikhade93226@gmail.com"
-                className="flex items-center gap-3.5 p-4 rounded-2xl modern-card group transition-all duration-300\"
+                className="flex items-center gap-3.5 p-4 rounded-2xl modern-card group transition-all duration-300"
               >
                 <div className="w-9 h-9 rounded-xl bg-accent/[0.08] flex items-center justify-center group-hover:bg-accent/[0.12] transition-colors">
                   <Mail className="w-4 h-4 text-accent" />
@@ -48,14 +48,18 @@ const ContactSection = () => {
                   GitHub
                 </Button>
               </a>
-              <a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="rounded-xl border border-accent/20 hover:border-accent/60 hover:text-accent hover:bg-accent/5 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20\">
+              <a
+                href="https://www.linkedin.com/in/om-nikhade-91a8a0257/?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="sm" className="rounded-xl border border-accent/20 hover:border-accent/60 hover:text-accent hover:bg-accent/5 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20">
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </Button>
               </a>
               <a href="https://leetcode.com/your-username" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="rounded-xl border border-accent/20 hover:border-accent/60 hover:text-accent hover:bg-accent/5 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20\">
+                <Button variant="outline" size="sm" className="rounded-xl border border-accent/20 hover:border-accent/60 hover:text-accent hover:bg-accent/5 transition-all duration-300 hover:shadow-lg hover:shadow-accent/20">
                   <Code2 className="w-4 h-4" />
                   LeetCode
                 </Button>
